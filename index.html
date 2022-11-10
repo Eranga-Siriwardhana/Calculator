@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator using HTML, CSS and JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body>
+ 
+
+    <td> <input type="text" id="fnum" name="fnum" /> </td>
+    <td> <select name="operator" id="operator_1">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select> </td>
+    <td> <input type="text" id="snum" name="snum" /> </td>
+    <td> <input type="button" value="=" />   </td>
+    <td> <input type="text" id="ans" name="ans" /> </td><br><br><br><br>
+
+    <td> <input type="text" id="fnum" name="fnum" /> </td><br>
+    <td> <input type="radio" id="+" name="operator_2" /> 
+          <label for="+">Addition</label><br>
+          <input type="radio" id="-" name="operator_2" /> 
+          <label for="-">Substraction</label><br>
+          <input type="radio" id="*" name="operator_2" /> 
+          <label for="*">Multiplication</label><br>
+          <input type="radio" id="/" name="operator_2" /> 
+          <label for="/">Division</label><br>
+          
+    </td>
+    <td> <input type="text" id="snum" name="snum" /> </td>
+    <td> <input type="button" value="=" /> </td>
+    <td> <input type="text" id="ans" name="ans" /> </td><br><br><br><br>
+
+    <div class="wrapper">
+      <input type="button" class="minus" value="-" >
+      <input type="button" class="num" value="01">
+      <input class="plus" type="button" value="+">
+    </div>
+    <script>
+     const plus = document.querySelector(".plus"),
+      minus = document.querySelector(".minus"),
+      num = document.querySelector(".num");
+      let a = 1;
+      plus.addEventListener("click", ()=>{
+        a++;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      });
+  
+      minus.addEventListener("click", ()=>{
+        if(a > 1){
+          a--;
+          a = (a < 10) ? "0" + a : a;
+          num.innerText = a;
+        }
+      });
+  
+    </script>
+
+
+
+   
+  
+<script type="text/javascript" src="java.js"></script>
+ 
+</body>
+ 
+</html>
